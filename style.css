@@ -1,0 +1,1100 @@
+/*
+Theme Name: Kyo
+Theme URL: http://poridiet.com/
+Description: ブログ型サイト向けのテーマ
+Author: k0000
+Version: 1.0
+Tags: アフィリエイト,企業,アダルト可
+*/
+
+iframe{
+  width: 100%;
+}
+
+*{
+  padding:0;
+  margin:0;
+}
+
+body,#wrapper{
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color:#777777;
+}
+
+
+
+/* 共通部分  */
+
+
+
+
+
+header.top-menu{
+  background:#2e2e2e;
+}
+/* ホームボタン */
+header.top-menu a{
+  font-size:24px;
+  padding:15px;
+  display: inline-block;
+  color: #fff;
+}
+header.top-menu a:hover{
+  color:#5882FA;
+}
+
+#nav-toggle{
+  position: absolute;
+  top:8px;
+  right: 20px;
+  cursor: pointer;
+  font-size:28px;
+  color:#fff;
+  display: none;
+}
+
+nav.top-main-menu{
+  position: absolute;
+  top:0;
+  right: 0;
+}
+
+
+nav.top-main-menu ul{
+  list-style: none;
+  display: flex;
+}
+nav.top-main-menu ul li a{
+  padding:18px 10px;
+  text-decoration: none;
+  display: block;
+  color:#58ACFA;
+  font-size:16px;
+}
+
+nav.top-main-menu ul li a:hover{
+  color:#fff;
+}
+
+
+
+@media (max-width:768px) {
+  #nav-toggle{
+    display: block;
+  }
+  nav.top-main-menu{
+
+    position: absolute;
+    top:auto;
+    width: 100%;
+    z-index: 999;
+
+    right: -1700px;
+  }
+
+  nav.top-main-menu.open{
+
+    right: 0;
+    transition: .6s;
+  }
+
+  nav.top-main-menu ul{
+    flex-direction: column;
+    background:rgba(0,0,0,.8);
+  }
+  nav.top-main-menu ul li{
+
+  }
+  nav.top-main-menu ul li a{
+    /* ここでようやく幅いっぱいに表示される */
+    width: 100%;
+    /* ここでようやく中央寄せになる */
+    text-align: center;
+    display: block;
+    color:#fff;
+  }
+  nav.top-main-menu ul li a:hover{
+    background:#e6e6e6;
+    color:#000;
+  }
+
+}
+
+/*      ナビゲーションメニューここまで        */
+
+
+
+
+
+
+/*      インデックス３ボックス      */
+#top-content{
+  width:100%;
+  margin:0;
+  padding:0;
+  display:-moz-box;
+  display:-ms-box;
+  display:-webkit-flexbox;
+  display:-moz-flexbox;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:-ms-flex;
+  display:flex;
+  -webkit-box-lines:multiple;
+  -moz-box-lines:multiple;
+  -webkit-flex-wrap:wrap;
+  -moz-flex-wrap:wrap;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+#top-content > div{
+  text-align: center;
+  width:32%;
+  background:#fff;
+  padding-bottom: 65px;
+  position: relative;
+
+}
+
+#top-content .thumb-area{
+  margin:0 auto;
+  margin-top:20px;
+  position: relative;
+  width:90%;
+  height:0;
+  padding-bottom:45%;
+  background: #4c4c4c;
+}
+
+#top-content .thumb-area figure{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#top-content .thumb-area figure img{
+  width: 100%;
+  height: 100%;
+}
+
+
+#top-content > div h2{
+  font-weight:bold;
+  font-size:110%;
+  text-align:center;
+  margin-bottom:15px;
+  margin-top:20px;
+}
+
+#top-content > div .readmore-area{
+  padding:0;
+  position: absolute;
+  bottom:10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#top-content > div a{
+  text-align:center;
+  padding:10px 10px;
+  color:#777777;
+  text-decoration: none;
+  padding: 10px 10px;
+  display: inline-block;
+  border:1px solid #C0C0C0;
+}
+
+#top-content > div a:hover{
+  color:#000;
+  background:#f2f2f2;
+}
+
+@media (max-width:680px) {
+
+  #top-content{
+    flex-direction: column;
+    -webkit-flex-direction: column;
+  }
+  #top-content > div{
+    width:95%;
+    margin-top: 20px;
+  }
+  #top-content img{
+
+    max-height: 300px;
+  }
+}
+
+
+
+
+/*    index記事一覧エリア    */
+.main-post-area{
+  background: #fff;
+  padding:10px 20px;
+  position: relative;
+}
+
+.main-post-area a{
+  text-decoration: none;
+}
+
+.main-post-area h2{
+  text-align: center;
+}
+
+
+.main-post-area ul{
+  list-style-type: none;
+}
+
+
+
+.main-post-area .thumb-area{
+  margin:0 auto;
+  margin-top:20px;
+  position: relative;
+  width:70%;
+  height:0;
+  /* ここが高さの幅になる 7:4 の比率ということ */
+  padding-bottom:40%;
+  background: #e0e0e0;
+  border:solid 10px #2c2c2c;
+}
+
+.main-post-area figure{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-post-area figure img{
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+}
+
+.main-post-area figure:hover img{
+  transform: scale(1.2);
+}
+
+
+
+.main-post-area section.posts{
+  padding-bottom:100px;
+}
+
+.main-post-area section.posts .readmore{
+  /* 親要素もポジションを指定していること */
+  position: absolute;
+  bottom:20px;
+  left:43%;
+}
+.main-post-area section.posts .readmore a{
+  text-align:center;
+  padding:10px 10px;
+  color:#777777;
+  text-decoration: none;
+  padding: 10px 10px;
+  display: inline-block;
+  border:1px solid #C0C0C0;
+}
+.main-post-area section.posts .readmore a:hover{
+  color:#000;
+  background:#f2f2f2;
+}
+
+
+
+/* サイドバー　ウィジェットエリア内のスタイル */
+.widget-item{
+  background:#fff;
+}
+.widget-item a{
+  color:#777777;
+  text-decoration: none;
+}
+.widget-item ul{
+  list-style-type: none;
+}
+.widget-item ul li{
+  margin-left:10px;
+  padding:5px 10px;
+  border-top:3px solid #eee;
+}
+
+.widget-item a:hover{
+  color:#58ACFA;
+}
+
+
+
+/* タグクラド */
+.tagcloud a{
+  display: inline-block;
+  font-size:13px;
+  padding:5px 9px;
+  margin:3px;
+  border:1px solid #eee;
+}
+.tagcloud a:hover{
+  color:#58ACFA;
+}
+
+
+
+
+/*  トップページフロントスライダー部分  */
+
+.front-content{
+  margin:0 auto;
+  margin-top:20px;
+  position: relative;
+  width: 70%;
+  height: 0;
+  padding-bottom:30%;
+  background:#e0e0e0;
+  border:3px solid #e0e0e0;
+}
+
+.front-content .slider-content{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.front-content .slider-content img{
+  width: 100%;
+  height: 100%;
+
+}
+
+.front-content .slider-content .front-text{
+  position: absolute;
+  top:10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-shadow:1px 3px 5px rgba(0,0,0,0.9);
+  color:#fff;
+  text-align: center;
+}
+
+
+@media (max-width:768px) {
+
+
+  .front-content{
+    width: 90%;
+    padding-bottom:45%;
+  }
+
+}
+
+@media (max-width:568px) {
+
+    .front-content .slider-content .front-text h1{
+      font-size:18px;
+    }
+    .front-content .slider-content .front-text p{
+      font-size:14px;
+    }
+}
+
+
+
+
+
+
+
+
+.header-navarea{
+    background: #2e2e2e;
+    display: flex;
+    /*　
+    これで右寄せ
+    最初のアイテムは始端に接する。
+    最後のアイテムは終端に接する。
+    */
+    justify-content: space-between;
+}
+
+
+
+.header-navarea ul{
+  display: flex;
+  list-style: none;
+  /* これをいれることによってヘッダーの隙間が消える */
+  margin:0 10px;
+}
+
+
+
+.header-navarea ul li{
+
+}
+
+.header-navarea ul li a{
+
+    text-align: center;
+    padding:13px 20px;
+    display: block;
+    text-decoration:none;
+    color:#fff;
+}
+
+.header-navarea ul li a:hover{
+  background: #BDBDBD;
+  color:#000;
+}
+
+.header-navarea #logo{
+  display: inline-block;
+  margin:10px 0 0 15px;
+  font-size:24px;
+  color:#fff;
+  text-decoration: none;
+}
+
+#logo a{
+  text-decoration: none;
+}
+
+
+
+
+/* 画面サイズが小さい時はトグルボタンを表示させる */
+@media (max-width:768px) {
+
+
+  #nav-toggle{
+    display:block;
+  }
+
+  /*
+    ここをカラムにかえることでおけ
+    そもそも横並びになっているので
+    縦並びにしてあげる
+  */
+  .header-navarea{
+      flex-direction: column;
+  }
+
+  .header-navarea ul{
+    flex-direction: column;
+    position: relative;
+  }
+
+  .header-navarea ul.open{
+
+    display: block;
+
+  }
+
+}
+
+
+
+/* ランキング記事 */
+.hot-post-area{
+  display:flex;
+  align-items: center;
+  border-bottom: 1px dotted #000;
+  padding-bottom:3px;
+}
+.hot-post-area .thumb-area{
+  margin:0 auto;
+  flex: 1;
+  position: relative;
+  width: 80%;
+  height: 0;
+  padding-bottom: 15%;
+}
+.hot-post-area .thumb-area figure{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.hot-post-area .thumb-area figure img{
+  width: 100%;
+  height: 100%;
+}
+.hot-post-area .text-area{
+  margin:0 auto;
+  padding-left:3px;
+  flex: 3;
+}
+.hot-post-area .text-area a{
+  color:#777777;
+  text-decoration: none;
+}
+/* 画面サイズが大きい時 */
+@media (min-width:768px) {
+  .hot-post-area .text-area a{
+    font-size:14px
+  }
+}
+
+
+.pickup-outer{
+    background: #fff;
+    padding:5px;
+}
+
+.pickup-post-area{
+  width:100%;
+  margin:0;
+  padding:0;
+  display:-moz-box;
+  display:-ms-box;
+  display:-webkit-flexbox;
+  display:-moz-flexbox;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:-ms-flex;
+  display:flex;
+  -webkit-box-lines:multiple;
+  -moz-box-lines:multiple;
+  -webkit-flex-wrap:wrap;
+  -moz-flex-wrap:wrap;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
+  justify-content: space-between;
+
+}
+.pickup-post-area > div{
+  width: 46%;
+  text-align: center;
+}
+
+.pickup-post-area .thumb-area{
+  margin:0 auto;
+  margin-top:20px;
+  position: relative;
+  width: 90%;
+  height: 0;
+  padding-bottom: 40%;
+}
+
+.pickup-post-area .thumb-area figure{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.pickup-post-area .pickup-child .thumb-area img{
+  width: 100%;
+  height:100%;
+}
+.pickup-post-area .text-area a{
+  text-decoration: none;
+}
+
+@media (max-width:768px) {
+  .pickup-post-area .text-area a{
+    font-size:13px;
+  }
+}
+
+
+
+.sns-area{
+  width:80%;
+  margin:0 auto;
+  padding:5px 0;
+  display:-moz-box;
+  display:-ms-box;
+  display:-webkit-flexbox;
+  display:-moz-flexbox;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:-ms-flex;
+  display:flex;
+  -webkit-box-lines:multiple;
+  -moz-box-lines:multiple;
+  -webkit-flex-wrap:wrap;
+  -moz-flex-wrap:wrap;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  border-top:3px solid #f0f0f0;
+
+}
+.sns-area > div{
+  font-size: 50%;
+}
+
+.sns-area a{
+  text-decoration: none;
+}
+
+#sns-t a{
+  color:#55acee;
+}
+#sns-f a{
+  color:#3b5999;
+}
+#sns-g a{
+  color:#dd4b39;
+}
+#sns-l a{
+  color:#00c300;
+}
+#sns-p a{
+  color:#ff0084
+}
+#sns-h a{
+  color:#007ee5;
+}
+
+
+.pankuzulist a{
+    text-decoration: none;
+}
+
+
+.nextprev-outer{
+  width:90%;
+  margin:0 auto;
+  padding:5px 0;
+  display:-moz-box;
+  display:-ms-box;
+  display:-webkit-flexbox;
+  display:-moz-flexbox;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:-ms-flex;
+  display:flex;
+  -webkit-box-lines:multiple;
+  -moz-box-lines:multiple;
+  -webkit-flex-wrap:wrap;
+  -moz-flex-wrap:wrap;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.nextprev-outer a{
+  text-decoration: none;
+}
+
+@media (max-width:768px) {
+  .nextprev-outer a{
+    font-size:13px;
+  }
+}
+
+.nextprev-outer > div {
+  width: 46%;
+}
+
+.nextprev-outer .thumb-area{
+  margin:0 auto;
+  position: relative;
+  width: 90%;
+  height: 0;
+  padding-bottom: 40%;
+}
+
+.nextprev-outer .thumb-area figure{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.nextprev-outer .thumb-area figure img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+nav{
+  margin: 0;
+}
+
+.navbar a{
+  text-decoration: none;
+  padding:10px 10px;
+  margin-left:10px;
+  float:right;
+  color:#fff;
+  font-weight: bold;
+}
+.navbar a:hover{
+  color:#A9D0F5;
+}
+
+
+header img{
+  height: 50px;
+}
+
+header ul li a{
+  text-decoration: none;
+  padding:10px 10px;
+  margin-left:10px;
+  float:right;
+  color:#fff;
+}
+
+header ul li a:hover{
+  text-decoration: none;
+  color:#A9D0F5;
+}
+
+
+/* パララックス部分は別ファイル化 */
+
+
+/* index.php */
+img.top-content{
+  width: 100%;
+}
+
+.top-content img{
+  width: 100%;
+  max-height: 450px;
+  border-radius: 20px;
+}
+.top-content .text{
+    padding: 20px 20px;
+}
+.top-content .text h3{
+  font-size:28px;
+
+}
+
+
+
+
+
+
+/* news */
+.news a{
+  text-decoration: none;
+}
+.news a:hover{
+  text-decoration: none;
+  color:#A9D0F5;
+}
+
+
+/* パララックス部分は別ファイル化 */
+
+
+
+/* イメージカード */
+.imgbox{
+  position: relative;
+  margin: 40px auto;
+  max-width: 300px;
+  overflow: hidden;
+  /* 画像の高さが一致していることが絶対条件 */
+  height: 300px;
+
+}
+.imgbox img{
+  min-width: 300px;
+  height: 300px;
+}
+.imgbox h3{
+  position: absolute;
+  margin:0;
+  padding: 0;
+  top:-50px;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+  color:#fff;
+  text-shadow:0 2px 5px rgba(0,0,0,0.5);
+  transition: .5s;
+}
+/* imgboxにホバーしたらh3を動かす */
+.imgbox:hover h3{
+  top:20%;
+  transform: translateY(-50%);
+}
+
+.imgbox p{
+  position: absolute;
+  margin: 0 auto;
+  padding: 0;
+  width:100%;
+  text-align: center;
+  background: rgba(0,0,0,.7);
+  transition: .5s;
+  color: #fff;
+  transform: translateY(100%);
+}
+.imgbox:hover p{
+  /* 位置が一行文ずれる（絶対位置から上に一行文) */
+  transform: translateY(-100%);
+}
+
+
+
+
+/* Footer */
+footer{
+  margin-top: auto;
+  padding: 30px 0;
+  background: #424242;
+
+}
+footer .footer-content{
+  color:#fff;
+}
+
+
+
+
+/* 投稿記事のスタイル */
+.post-title h1{
+  padding: 20px 10px;
+  background: #D8D8D8;
+  color: #0B2161;
+  text-align: center;
+  position: relative;
+  font-weight: bold;
+  font-size:1.9em;
+}
+
+.post-title h1:after {
+position: absolute;
+content: '';
+top: 100%;
+left: 30px;
+border: 15px solid transparent;
+border-top: 15px solid #a4a4a4;
+width: 0;
+height: 0;
+}
+
+.post-area{
+  background:#fff;
+  padding : 5px 5px;
+}
+
+.post-area img{
+  max-width: 100%;
+  height: auto;
+}
+
+.post-area .image-fix img{
+  width: 250px;
+  height: 250px;
+}
+
+.post-area p{
+  margin-bottom: 50px;
+}
+
+.post-bottom h4{
+  text-align: center;
+  margin-bottom:1em;
+}
+.post-bottom ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.post-bottom ul li{
+  padding: 0 10px;
+}
+.post-bottom ul li a{
+  text-decoration: none;
+}
+.post-bottom button{
+  width: 90%;
+}
+
+.post-bottom button#post-pre{
+  text-align: left;
+}
+
+.post-bottom button#post-next{
+  text-align: right;
+}
+
+.post-bottom button a{
+  display: block;
+  text-decoration: none;
+  color:#fff;
+}
+
+
+
+/* レスポンシブ対応 */
+/* 768px以下の時(col-mdサイズ)  */
+@media (max-width:768px) {
+  .header-text h1{
+    font-size: 1.5em;
+  }
+  .sotre-content h3{
+    font-size: 1.5em;
+  }
+  p{
+    font-size:15px;
+  }
+  table {
+    font-size: 14px;
+  }
+  .post-title h1{
+    font-size:1.5em;
+  }
+  .post-area{
+    font-size:14px;
+  }
+  .post-area h1{
+    font-size:1.9em;
+  }
+  .post-area h2{
+    font-size:1.8em;
+  }
+  .post-area h3{
+    font-size:1.7em;
+  }
+  .post-area h4{
+    font-size:1.6em;
+  }
+  .post-area h5{
+    font-size:1.5em;
+  }
+  .post-area h6{
+    font-size:1.4em;
+  }
+  footer h4{
+    font-size: 1.3em;
+  }
+}
+
+/* レスポンシブ対応 */
+/* 576px以下の時(col-smサイズ)  */
+@media (max-width:576px) {
+
+  .top-content .text h3{
+    font-size:1.3em;
+  }
+  table {
+    font-size: 12px;
+  }
+  .post-title h1{
+    font-size:1.3em;
+  }
+}
+
+
+
+
+/* ページネーション */
+
+.pagenation {
+    margin: 1em 0;
+}
+.pagenation:after, .pagenation ul:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.pagenation ul {
+    margin: 0;
+}
+.pagenation li {
+    float: left;
+    list-style: none outside none;
+    margin-left: 3px;
+}
+.pagenation li:first-child {
+    margin-left: 0;
+}
+.pagenation li.active {
+    background-color: #424242;
+    border-radius: 3px;
+    color: #FFFFFF;
+    padding: 8px 17px;
+}
+.pagenation li a {
+    background: none repeat scroll 0 0 #848484;
+    border-radius: 3px;
+    color: #FFFFFF;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+.pagenation li a:hover {
+    background-color: #D8D8D8;
+    color: #FFFFFF;
+    opacity: 0.8;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+
+
+
+
+/*sns*/
+.sns-area-container{
+  background: #E6E6E6;
+}
+.sns-area{
+  list-style: none;
+  text-align: center;
+}
+.sns-area li{
+  display: inline;
+}
+.sns-area i{
+  font-size:460%;
+  padding:2% 6% 2% 6%;
+}
+.sns-area i#twitter-icon{
+  color:#55acee;
+}
+.sns-area i#facebook-icon{
+  color:#3b5999;
+}
+.sns-area i#google-icon{
+  color:#dd4b39;
+}
+.sns-area i:hover{
+  opacity: .7;
+}
+
+@media (max-width:768px) {
+  .sns-area i{
+    font-size:360%;
+  }
+}
+@media (max-width:576px) {
+  .sns-area i{
+    font-size:300%;
+  }
+}

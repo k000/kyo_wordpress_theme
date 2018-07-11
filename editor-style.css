@@ -1,0 +1,57 @@
+/* 2カラム時のスタイル */
+.col-left{
+  background: #CEECF5;
+  padding:10px;
+}
+
+.col-right{
+  background: #A9F5A9;
+  padding:10px;
+}
+
+
+.row img{
+  max-width:300px;
+  max-height:300px
+}
+
+/* 3カラム時のスタイル */
+.three-col-left{
+  background: #CEECF5;
+  padding:10px;
+}
+
+.three-col-right{
+  background: #A9F5A9;
+  padding:10px;
+}
+
+.three-col-center{
+  background: #F6E3CE;
+  padding:10px;
+}
+
+
+/* 4カラム */
+.four-one{
+  background: #F8E6E0;
+  padding:10px;
+}
+.four-two{
+  background: #D8F6CE;
+  padding:10px;
+}
+.four-three{
+  background: #CEECF5;
+  padding:10px;
+}
+.four-four{
+  background: #F6CED8;
+  padding:10px;
+}
+
+/* 4カラム画像固定 */
+.image-fix img{
+  width: 250px;
+  height: 250px;
+}
